@@ -10,6 +10,12 @@ header div{
 header div img{
     width:100px;
 }
+nav div{
+    padding: 5px;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+}
 nav div ul{
     margin: 0 auto;
     width:700px;
@@ -22,6 +28,20 @@ nav div ul{
     display: grid;
     height: auto;
     grid-template-columns: 200px auto 200px;
+    grid-template-rows:auto auto auto;
+    row-gap: 30px;
+}
+#container header{
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+}
+#container nav{
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+}
+#container footer{
+    grid-column: 1/ 4;
+    grid-row: 3 / 4;
 }
 
 #container .contents{
@@ -29,6 +49,8 @@ nav div ul{
     display: grid;
     align-content: flex-start;
     grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
 }
 #container .contents img{
     position: relative;
