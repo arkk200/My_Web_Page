@@ -1,0 +1,9 @@
+*{margin: 0; padding: 0;}
+body{overflow: hidden;}
+
+#go-back img{
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    width: 50px;
+}
