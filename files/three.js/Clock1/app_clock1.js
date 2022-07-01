@@ -111,7 +111,7 @@ function onResize(){
 window.addEventListener('resize', onResize);
 
 // Animation
-function animate(time){
+function animate(){
     requestAnimationFrame(animate);
     let currentTime = new Date();
     let hour = currentTime.getHours();

@@ -10,6 +10,7 @@ header div{
 header div img{
     width:100px;
 }
+
 nav div{
     padding: 5px;
     color: white;
@@ -23,6 +24,9 @@ nav div ul{
     display: flex;
     justify-content: space-around;
 }
+nav div ul li{
+    cursor: pointer;
+}
 
 #container{
     display: grid;
@@ -30,6 +34,7 @@ nav div ul{
     grid-template-columns: 200px auto 200px;
     grid-template-rows:auto auto auto;
     row-gap: 30px;
+    /* height: 1000px; */
 }
 #container header{
     grid-column: 1 / 4;
@@ -42,24 +47,37 @@ nav div ul{
 #container footer{
     grid-column: 1/ 4;
     grid-row: 3 / 4;
+    background-color: #000;
+    padding: 20px;
 }
-
 #container .contents{
     list-style: none;
     display: grid;
+    padding: 20px;
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
     align-content: flex-start;
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
     row-gap: 20px;
 }
+#container .contents .content{
+    border: 2px solid #000;
+    padding: 3px;
+}
 #container .contents img{
     position: relative;
+    display: block;
     width:100%;
 }
+
+footer #last-update-date{
+    color: white;
+    font-size: 13px;
+    text-align: center;
+}
+
 @media (max-width: 700px){
-    /* header div img{
-        width:50px;
-    } */
     nav div ul{
         width: 450px;
     }
@@ -67,5 +85,8 @@ nav div ul{
 @media (max-width: 1050px) {
     #container{
         grid-template-columns: auto;
+    }
+    #container .contents{
+        border: none;
     }
 }
