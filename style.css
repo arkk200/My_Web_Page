@@ -3,6 +3,22 @@
     padding: 0;
 }
 
+
+#container{
+    display: grid;
+    height: auto;
+    grid-template-columns: 200px auto 200px;
+    grid-template-rows:auto minmax(600px, auto) auto;
+    row-gap: 30px;
+    height: max-content;
+}
+
+
+
+#container header{
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+}
 header div{
     display: flex;
     justify-content: center;
@@ -11,6 +27,12 @@ header div img{
     width:100px;
 }
 
+
+
+#container nav{
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+}
 nav div{
     padding: 5px;
     color: white;
@@ -28,29 +50,21 @@ nav div ul li{
     cursor: pointer;
 }
 
-#container{
-    display: grid;
-    height: auto;
-    grid-template-columns: 200px auto 200px;
-    grid-template-rows:auto minmax(500px, auto) auto;
-    row-gap: 30px;
-    min-height:min-content;
-    /* height: 1000px; */
-}
-#container header{
-    grid-column: 1 / 4;
-    grid-row: 1 / 2;
-}
-#container nav{
-    grid-column: 1 / 4;
-    grid-row: 2 / 3;
-}
+
+
 #container footer{
     grid-column: 1/ 4;
     grid-row: 3 / 4;
     background-color: #000;
     padding: 20px;
+    height: min-content;
 }
+footer #last-update-date{
+    color: white;
+    font-size: 13px;
+    text-align: center;
+}
+
 #container .contents{
     list-style: none;
     display: grid;
@@ -62,32 +76,62 @@ nav div ul li{
     column-gap: 20px;
     row-gap: 20px;
 }
-#container .contents .content{
+.contents .content{
     border: 2px solid #000;
     padding: 3px;
 }
-#container .contents img{
+.contents img{
     position: relative;
     display: block;
     width:100%;
 }
 
-footer #last-update-date{
-    color: white;
-    font-size: 13px;
-    text-align: center;
+#container #section1, #section2{
+    padding:20px;
 }
 
-@media (max-width: 750px){
-    nav div ul{
-        width: 450px;
-    }
-}
+#container #section1{ order: 1; }
+#container .contents{ order: 2; }
+#container #section2{ order: 3; }
+
+
+
 @media (max-width: 1050px) {
+    #container #section1{ order: 0; }
+    #container .contents{ order: 0; }
+    #container #section2{ order: 0; }
+
     #container{
-        grid-template-columns: auto;
+        height: 100vh;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:auto auto minmax(250px, auto) min-content;
     }
+
     #container .contents{
-        border: none;
+        grid-column: 1 / 3;
+        margin: 0 20px;
+        padding: 20px 0;
+        border-left: none;
+        border-right: none;
+        border-bottom: 2px solid black;
+    }
+    #container .contents::after{
+        border-bottom: 2px solid black;
+    }
+    #container #section1{
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        border-right: 1px solid #000;
+        padding: 0 20px 0;
+    }
+    #container #section2{
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+        border-left: 1px solid #000;
+        padding: 0 20px 0;
+    }
+
+    #container footer{
+        grid-row: 4 / 5;
     }
 }
