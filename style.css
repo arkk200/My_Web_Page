@@ -19,6 +19,7 @@
 #container header{
     grid-column: 1 / 4;
     grid-row: 1 / 2;
+    height: min-content;
 }
 header div{
     display: flex;
@@ -80,6 +81,7 @@ nav div ul li{
     padding: 20px;
     border-left: 2px solid #000;
     border-right: 2px solid #000;
+    max-height: max-content;
 }
 
 
@@ -133,7 +135,7 @@ footer #last-update-date{
     #container{
         height: 100vh;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows:auto auto minmax(250px, auto) min-content;
+        grid-template-rows:min-content auto minmax(250px, auto) min-content;
     }
 
     /*Resposive Contents*/

@@ -1,6 +1,6 @@
 // Setting
-document.getElementById('three-js-contents').style.display = 'none';
-document.getElementById('my-introduce-contents').style.display = '';
+document.getElementById('three-js-contents').style.display = '';
+document.getElementById('my-introduce-contents').style.display = 'none';
 document.getElementById('etc-contents').style.display = 'none';
 
 const $three_js = document.getElementById('three-js');
