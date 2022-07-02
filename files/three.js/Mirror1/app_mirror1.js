@@ -1,4 +1,5 @@
 import * as THREE from 'https://cdn.skypack.dev/three@0.140.0'
+import threejsOrbitControls from 'https://cdn.skypack.dev/threejs-orbit-controls';
 
 const scene = new THREE.Scene();
 
@@ -19,6 +20,8 @@ scene.add(al);
 const renderer = new THREE.WebGLRenderer({antialias:true});
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
+
+const controls = new threejsOrbitControls(camera, renderer.domElement);
 
 const renderTargetOptions = {
     format: THREE.RGBAFormat,

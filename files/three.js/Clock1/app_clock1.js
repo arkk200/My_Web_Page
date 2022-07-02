@@ -1,6 +1,9 @@
 import * as THREE from 'https://cdn.skypack.dev/three@0.133'
+import threejsOrbitControls from 'https://cdn.skypack.dev/threejs-orbit-controls';
 import {FontLoader} from "https://cdn.skypack.dev/three@0.133/examples/jsm/loaders/FontLoader.js";
 import {TextGeometry} from "https://cdn.skypack.dev/three@0.133/examples/jsm/geometries/TextGeometry.js";
+
+// Responsive
 
 // Scene
 const scene = new THREE.Scene();
@@ -13,7 +16,7 @@ const camera = new THREE.PerspectiveCamera(
     1,
     1000
 );
-camera.position.set(0,0,20);
+camera.position.set(0,0,25);
 
 // FontLoader, TextGeometry
 const loader = new FontLoader();
@@ -54,6 +57,8 @@ const renderer = new THREE.WebGLRenderer({antialias:true});
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
+const controls = new threejsOrbitControls(camera, renderer.domElement);
+
 // Geometry, Material, Mesh
 
 // ClockBody
@@ -65,6 +70,7 @@ const clkbodymat = new THREE.MeshPhongMaterial({
 });
 const clkbodymesh = new THREE.Mesh(clkbodygeo, clkbodymat);
 clkbodymesh.rotation.x = 90 * Math.PI / 180;
+clkbodymesh.position.z = 2.3;
 scene.add(clkbodymesh);
 
 // ClockNeedle

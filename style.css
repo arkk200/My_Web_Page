@@ -4,6 +4,7 @@
 }
 
 
+/*Container*/
 #container{
     display: grid;
     height: auto;
@@ -14,7 +15,7 @@
 }
 
 
-
+/*Header*/
 #container header{
     grid-column: 1 / 4;
     grid-row: 1 / 2;
@@ -28,7 +29,7 @@ header div img{
 }
 
 
-
+/*Nav*/
 #container nav{
     grid-column: 1 / 4;
     grid-row: 2 / 3;
@@ -51,20 +52,7 @@ nav div ul li{
 }
 
 
-
-#container footer{
-    grid-column: 1/ 4;
-    grid-row: 3 / 4;
-    background-color: #000;
-    padding: 20px;
-    height: min-content;
-}
-footer #last-update-date{
-    color: white;
-    font-size: 13px;
-    text-align: center;
-}
-
+/*Contents*/
 #container .contents{
     list-style: none;
     display: grid;
@@ -86,16 +74,57 @@ footer #last-update-date{
     width:100%;
 }
 
+
+/*My-Introduce*/
+#my-introduce-contents{
+    padding: 20px;
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+}
+
+
+/*Sections*/
 #container #section1, #section2{
     padding:20px;
 }
 
+
+/*Order*/
 #container #section1{ order: 1; }
 #container .contents{ order: 2; }
+#container #my-introduce-contents{ order: 2; }
 #container #section2{ order: 3; }
 
 
+/*Section1*/
+#section1 fieldset{
+    padding: 5px;
+    padding-top: 0;
+}
+#section1 ul{
+    list-style: none;
+}
+#section1 ul a{
+    text-decoration: none;
+}
 
+
+/*Footer*/
+#container footer{
+    grid-column: 1/ 4;
+    grid-row: 3 / 4;
+    background-color: #000;
+    padding: 20px;
+    height: min-content;
+}
+footer #last-update-date{
+    color: white;
+    font-size: 13px;
+    text-align: center;
+}
+
+
+/*ResposiveWeb*/
 @media (max-width: 1050px) {
     #container #section1{ order: 0; }
     #container .contents{ order: 0; }
@@ -107,6 +136,7 @@ footer #last-update-date{
         grid-template-rows:auto auto minmax(250px, auto) min-content;
     }
 
+    /*Resposive Contents*/
     #container .contents{
         grid-column: 1 / 3;
         margin: 0 20px;
@@ -115,7 +145,14 @@ footer #last-update-date{
         border-right: none;
         border-bottom: 2px solid black;
     }
-    #container .contents::after{
+
+    /*Resposive My Introduce Contents*/
+    #container #my-introduce-contents{
+        grid-column: 1 / 3;
+        margin: 0 20px;
+        padding: 20px 0;
+        border-left: none;
+        border-right: none;
         border-bottom: 2px solid black;
     }
     #container #section1{
