@@ -27,6 +27,7 @@ header div{
 }
 header div img{
     width:100px;
+    filter:invert();
 }
 
 
