@@ -14,6 +14,21 @@
     height: max-content;
 }
 
+body::-webkit-scrollbar{
+    width:10px;
+    margin:3px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: #000;
+
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track{
+    width: 10px;
+    background-color: rgba(33, 122, 244, .1);
+}
 
 /*Header*/
 #container header{
@@ -37,7 +52,9 @@ header div img{
     grid-row: 2 / 3;
 }
 nav div{
-    padding: 13px;
+    display: flex;
+    align-items: center;
+    height: 50px;
     color: white;
     background-color: black;
 }
@@ -49,9 +66,16 @@ nav div ul{
     justify-content: space-around;
 }
 nav div ul li{
+    padding: 5px;
     cursor: pointer;
+    transition: 0.1s ease-out;
 }
 
+nav div ul li:hover{
+    border-radius: 10px;
+    background-color: white;
+    color:black;
+}
 
 /*Contents*/
 #container .contents{
@@ -60,17 +84,24 @@ nav div ul li{
     padding: 20px;
     border-left: 2px solid #000;
     border-right: 2px solid #000;
-    align-content: flex-start;
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
     row-gap: 20px;
+    font-size: 0;
 }
 .contents .content{
+    display: flex;
+    align-items: center;
+    min-height: 10px;
     border: 2px solid #000;
-    padding: 3px;
+    padding: 5px;
+    transition:0.1s ease-out;
 }
+.contents .content:hover{
+    background-color: #000;
+}
+
 .contents img{
-    position: relative;
     display: block;
     width:100%;
 }
