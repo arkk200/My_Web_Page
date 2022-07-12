@@ -7,7 +7,7 @@ import {TextGeometry} from "https://cdn.skypack.dev/three@0.133/examples/jsm/geo
 
 // Scene
 const scene = new THREE.Scene();
-scene.background = new THREE.Color("white");
+// scene.background = new THREE.Color("white");
 
 // Camera
 const camera = new THREE.PerspectiveCamera(

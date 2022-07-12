@@ -8,150 +8,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="container">
-        <header>
-            <div>
-                <img src="./images/web_page_images/Logo.png" alt="WebImage">
-            </div>
-            <nav>
-                <div>
+    <div id="window">
+        <div id="container">
+            <div id="top">
+                <header>
+                    <a href="">
+                        <img src="./images/web_page_images/Logo.png" alt="Logo">
+                    </a>
+                </header>
+                <nav>
                     <ul>
                         <li id="three-js">
-                            Three.js
+                            <button>Three.js</button>
                         </li>
                         <li id="web-introduce">
-                            About this web
+                            <button>About this web</button>
                         </li>
                         <li id="etc">
-                            ETC
+                            <button>ETC</button>
                         </li>
                     </ul>
-                </div>
-            </nav>
-        </header>
-
-        <!--Three.js-->
-        <ul id="three-js-contents" class="contents">
-            <li class="content">
-                <a href="./files/three.js/Clock1/clock1.html">
-                    <img src="./contents_images/three.js/three.js_Clock1.png" alt="Clock1">
-                </a>
-            </li class="content">
-            <li class="content">
-                <a href="./files/three.js/Mirror1/mirror1.html">
-                    <img src="./contents_images/three.js/three.js_Mirror1.png" alt="Mirror1">
-                </a>
-            </li>
-            <li class="content">
-                <a href="./files/three.js/Clock2/clock2.html">
-                    <img src="./contents_images/three.js/three.js_Clock2.png" alt="Clock2">
-                </a>
-            </li>
-            <li class="content">
-                <a href="./files/three.js/Mirror2/mirror2.html">
-                    <img src="./contents_images/three.js/three.js_Mirror2.png" alt="Mirror2">
-                </a>
-            </li>
-            <li class="content">
-                <a href="./files/three.js/Yacht_Dice/yacht_dice.html">
-                    <img src="./contents_images/three.js/three.js_Yacht_Dice.png" alt="Yacht_Dice">
-                </a>
-            </li>
-            <li class="content">
-                <a href="./files/three.js/Skybox/skybox.html">
-                    <img src="./contents_images/three.js/three.js_Skybox.png" alt="Skybox">
-                </a>
-            </li>
-            <li class="content">
-                <a href="">
-                    <img src="" alt="">
-                </a>
-            </li>
-            <li class="content">
-                <a href="">
-                    <img src="" alt="">
-                </a>
-            </li>
-        </ul>
-
-        <!--My Introduce-->
-        <div id="web-introduce-contents">
-            <div>
-                <h2>이 웹사이트는 무엇을 하는 웹사이트인가요?</h2>
-                <p>
-                    이 웹사이트는 제가 three.js나 다양한 모듈을 이용하여 만든 작품을 전시하는 사이트입니다.<br>
-                    이 사이트에는 three.js를 활용한 3D 작품 외에도, 게임, 유용한 작품들(계산기, 픽셀측정기 등등...),<br>
-                    조만간 할지 모르겠지만 lottie를 활용한 애니메이션도 만들어 볼 예정입니다.
-                </p>
+                </nav>
             </div>
-        </div>
-
-        <!--ETC-->
-        <ul id="etc-contents" class="contents">
-            <li class="content">
-                <a href="">
-                    <img src="" alt="">
-                </a>
-            </li>
-            <li class="content">
-                <a href="">
-                    <img src="" alt="">
-                </a>
-            </li>
-            <li class="content">
-                <a href="">
-                    <img src="" alt="">
-                </a>
-            </li>
-            <li class="content">
-                <a href="">
-                    <img src="" alt="">
-                </a>
-            </li>
-            <li class="content">
-                <a href="">
-                    <img src="" alt="">
-                </a>
-            </li>
-            <li class="content">
-                <a href="">
-                    <img src="" alt="">
-                </a>
-            </li>
-            <li class="content">
-                <a href="">
-                    <img src="" alt="">
-                </a>
-            </li>
-            <li class="content">
-                <a href="">
-                    <img src="" alt="">
-                </a>
-            </li>
-        </ul>
-
-        <div id="section1">
-            <fieldset>
-                <legend>Visit</legend>
-                <ul>
-                    <li>
-                        <a href="https://github.com/arkk200">My Github</a>
-                    </li>
-                    <li>
-                        <a href="https://blog.naver.com/goodmjlee2006">My Naver Blog</a>
-                    </li>
-                </ul>
-            </fieldset>
-        </div>
-        <div id="section2">
-            Empty
-        </div>
-        <footer>
-            <div id="last-update-date">
-                마지막 업데이트 날짜 및 시간: 2022-07-02, 12:44(PM)
+            <div id="select">
+                <h1><a href='./files/three.js/Clock1/clock1.html'>Clock1</a></h1>
             </div>
-        </footer>
+            <div id="hide-box"></div>
+            <canvas id="canvas"></canvas>
+        </div>
+        </div>
     </div>
+    <script src="contents.js" type="module" defer></script>
     <script src="main.js"></script>
 </body>
 </html>
