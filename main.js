@@ -77,7 +77,7 @@ function ChangeHideBox2Select(){
         selectBoxHeight = 50;
     }
     if(selectBoxWidth >= 260) {
-        selectBoxWidth = 260;o
+        selectBoxWidth = 260;
     };
     if(selectBoxLeft <= 15) selectBoxLeft = 15;
 }
