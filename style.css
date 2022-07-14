@@ -85,10 +85,16 @@ nav ul li button:hover{
     top:50%;
     transform: translate(0, -50%) scaleY(1);
     width:25%;
-    left: 25%;
+    /* left: 25%; */
+    clip-path: polygon(100% 0%, 200% 0%, 200% 100%, 100% 100%);
     height:295px;
 }
-
+#hide-box h2{
+    width:90%;
+}
+#hide-box p{
+    width:90%;
+}
 
 canvas{
     z-index: -1;

@@ -68,11 +68,16 @@ function ChangeHideBox2Select(){
     anima = requestAnimationFrame(ChangeHideBox2Select);
     $select.style.width = `${selectBoxWidth}px`;
     $select.style.height = `${selectBoxHeight}px`;
-    if(selectBoxWidth >= 260 && selectBoxHeight <= 50) { cancelAnimationFrame(anima); isStop = true;}
     $select.style.left = `${selectBoxLeft}%`;
+    if(selectBoxWidth >= 260 && selectBoxHeight <= 50) {
+        $select.style.width = `260px`;
+        $select.style.height = `50px`;
+        $select.style.left = `15%`;
+        isStop = true; cancelAnimationFrame(anima);
+    }
     selectBoxHeight *= 0.9;
     selectBoxWidth += selectBoxHeight / 8.5;
-    selectBoxLeft -= selectBoxHeight / 260;
+    selectBoxLeft -= selectBoxHeight / 220;
     if(selectBoxHeight <= 50) {
         selectBoxHeight = 50;
     }
@@ -84,16 +89,23 @@ function ChangeHideBox2Select(){
 
 function ChangeSelect2HideBox(){
     isStop = false;
+    $hide_boxH2.style.marginLeft = `${hideP*10}%`;
+    $hide_boxP.style.marginLeft = `${hideP*10}%`;
     anima = requestAnimationFrame(ChangeSelect2HideBox);
     $select.style.width = `${selectBoxWidth}px`;
     $select.style.height = `${selectBoxHeight}px`;
-    $select.style.left = `${selectBoxLeft +-2}%`;
+    $select.style.left = `${selectBoxLeft}%`;
     console.log(hideP);
-    if(selectBoxWidth <= 0 && selectBoxHeight >= 295) {cancelAnimationFrame(anima); isStop = true;}
+    if(selectBoxWidth <= 0 && selectBoxHeight >= 295) {
+        $select.style.width = `0px`;
+        $select.style.height = `295px`;
+        $select.style.left = `25%`;
+        isStop = true; cancelAnimationFrame(anima);
+    }
     $hide_boxP.style.left = `${hideP}%`
     selectBoxWidth *= 0.85;
     selectBoxHeight += selectBoxWidth / 5.9;
-    selectBoxLeft += selectBoxWidth / 160;
+    selectBoxLeft += selectBoxWidth / 145;
     console.log(selectBoxLeft);
     hideP += selectBoxWidth / 140;
     if(selectBoxWidth <= 1) {
@@ -106,8 +118,18 @@ function ChangeSelect2HideBox(){
     if(hideP >= 100) hideP = 100;
 }
 
+
+$hide_boxH2.style.display = 'none';
+$hide_boxP.style.display = 'none';
+
+
 $three_js.addEventListener('click', () => {
     if(isStop){
+        hideP = 0;
+        $hide_boxH2.style.marginLeft = `${0}%`;
+        $hide_boxP.style.marginLeft = `${0}%`;
+        $hide_boxH2.style.display = 'none';
+        $hide_boxP.style.display = 'none';
         $select.style.display = '';
         contentsNum = 1;
         contentsArr = three_js_contents;
@@ -118,12 +140,19 @@ $three_js.addEventListener('click', () => {
 
 $web_introduce.addEventListener('click', () => {
     if(isStop){
+        $hide_boxH2.style.display = '';
+        $hide_boxP.style.display = '';
         ChangeSelect2HideBox();
     }
 });
 
 $etc.addEventListener('click', () => {
     if(isStop){
+        hideP = 0;
+        $hide_boxH2.style.marginLeft = `${0}%`;
+        $hide_boxP.style.marginLeft = `${0}%`;
+        $hide_boxH2.style.display = 'none';
+        $hide_boxP.style.display = 'none';
         $select.style.display = '';
         contentsNum = 2;
         contentsArr = etc_js_contents;
