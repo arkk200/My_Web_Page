@@ -24,7 +24,7 @@ function Header() {
             
             setTimeout(() => {
                 menuOptionWindow.current.classList.add('menu-options-window-hidden');
-            }, 2000);
+            }, 1000);
             menuOptionsBg.current.classList.remove('menu-options-bg-animation');
             for(let i = 0; i < 4; i++)
                 setTimeout(() => {

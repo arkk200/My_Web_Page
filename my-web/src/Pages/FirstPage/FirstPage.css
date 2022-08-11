@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Playfair+Display:wght@600&display=swap');
 
-/* FirstPage */
-#first-page{
-    height: 100vh;
-}
-
 /* Contents */
 #first-page{
     height: 100vh;
@@ -12,7 +7,7 @@
 }
 #first-page #contents{
     position: absolute;
-    top: 50%;
+    top: 50vh;
     left: 3%;
     transform: translateY(-50%);
 }

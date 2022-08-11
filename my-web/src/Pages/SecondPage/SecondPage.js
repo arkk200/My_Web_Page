@@ -1,7 +1,9 @@
+import './SecondPage.css';
+
 function SecondPage(){
     return(
         <div id="second-page">
-            <div id="contents">
+            <div id="second-page-contents">
 
             </div>
         </div>

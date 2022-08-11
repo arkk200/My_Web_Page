@@ -8,7 +8,7 @@ body{
 
 /* WrapPage */
 #wrap-container{
-    height: 300vh;
+    height: 200vh;
     overflow: hidden;
 }
 
@@ -185,7 +185,7 @@ body{
 
 /* Hide window / Show options bg class */
 .menu-options-window-hidden{
-    display: none;
+    display: none !important;
 }
 .menu-options-bg-animation{
     transition: 0.3s !important;
