@@ -2,6 +2,10 @@
     --home-menu-button-line: 0.2rem;
 }
 
+body{
+    background-color: #dcdcdc;
+}
+
 /* WrapPage */
 #wrap-container{
     height: 300vh;
