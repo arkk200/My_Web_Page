@@ -32,7 +32,6 @@
 #title-me{
     position: relative;
     color: #dcdcdc;
-    /* opacity: 0; */
     right: 20%;
     z-index: 0;
     filter: drop-shadow(0 0 -1px black);
@@ -44,7 +43,6 @@
     opacity: 1 !important;
 }
 .title-me-animation{
-    /* opacity: 1 !important; */
     filter: drop-shadow(0 0 10px black) !important;
 }
 

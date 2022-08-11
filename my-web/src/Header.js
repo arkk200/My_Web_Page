@@ -5,25 +5,43 @@ function Header() {
     const menuButton = useRef();
     const homeButton = useRef();
     const homeMenuButtonRef = useRef();
+
     const [isMenu, setIsMenu] = useState(true);
+
     const sites = useRef([]);
     const siteLogos = useRef([]);
     const siteIds = useRef([]);
 
+    const menuOptionWindow = useRef();
+    const menuOptions = useRef();
+    const menuOptionsBg = useRef();
+    const menuOptionsLi = useRef([]);
+
     useEffect(() => {
-        if (isMenu) {
+        if (isMenu) { // 매뉴버튼을 눌렀는가?
             homeButton.current.classList.add('home-btn-hidden');
             menuButton.current.classList.remove('menu-btn-hidden');
+            
+            setTimeout(() => {
+                menuOptionWindow.current.classList.add('menu-options-window-hidden');
+            }, 2000);
+            menuOptionsBg.current.classList.remove('menu-options-bg-animation');
+            for(let i = 0; i < 4; i++)
+                setTimeout(() => {
+                    menuOptionsLi.current[i].classList.remove('li-show-animation');
+                }, 240 - i * 80);
         } else {
             menuButton.current.classList.add('menu-btn-hidden');
             homeButton.current.classList.remove('home-btn-hidden');
+
+            menuOptionWindow.current.classList.remove('menu-options-window-hidden');
+            menuOptionsBg.current.classList.add('menu-options-bg-animation');
+            for(let i = 0; i < 4; i++)
+                setTimeout(() => {
+                    menuOptionsLi.current[i].classList.add('li-show-animation');
+                }, 300 + i * 100);
         }
     }, [isMenu]);
-
-    function animate(){
-        requestAnimationFrame(animate);
-    }
-    animate();
     useEffect(() => {
         setTimeout(() => {
             homeMenuButtonRef.current.style.display = 'block';
@@ -41,13 +59,14 @@ function Header() {
 
     return (
         <div id="header">
-            <div id="menu-options" className="menu-options-hidden">
-                <ul>
-                    <li>Home</li>
-                    <li>My favorite</li>
-                    <li>My stack</li>
-                    <li>Works</li>
+            <div id="menu-options" ref={menuOptionWindow}>
+                <ul ref={menuOptions}>
+                    <li ref={e => menuOptionsLi.current[0] = e}>Home</li>
+                    <li ref={e => menuOptionsLi.current[1] = e}>My favorite</li>
+                    <li ref={e => menuOptionsLi.current[2] = e}>My stack</li>
+                    <li ref={e => menuOptionsLi.current[3] = e}>Works</li>
                 </ul>
+                <div id="menu-options-background" ref={menuOptionsBg}></div>
             </div>
             <div id="sites">
                 <ul>
