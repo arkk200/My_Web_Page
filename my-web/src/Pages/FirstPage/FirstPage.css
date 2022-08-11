@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Playfair+Display:wght@600&display=swap');
+
+/* FirstPage */
+#first-page{
+    height: 100vh;
+}
+
+/* Contents */
+#first-page{
+    height: 100vh;
+    width: 100vw;
+}
+#first-page #contents{
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    transform: translateY(-50%);
+}
+
+/* title */
+#contents #title{    
+    font-size: 21rem;
+    font-family: 'Playfair Display', serif;
+}
+
+#title-about{
+    filter: blur(10px);
+    opacity: 0;
+    transition: 0.8s;
+    transition-delay: 0.9s;
+}
+#title-me{
+    position: relative;
+    color: #dcdcdc;
+    /* opacity: 0; */
+    right: 20%;
+    z-index: 0;
+    filter: drop-shadow(0 0 -1px black);
+    transition: 0.4s ease-out;
+    transition-delay: 0.7s;
+}
+.title-about-animation{
+    filter: blur(1px) !important;
+    opacity: 1 !important;
+}
+.title-me-animation{
+    /* opacity: 1 !important; */
+    filter: drop-shadow(0 0 10px black) !important;
+}
+
+/* My Name */
+#my-name{
+    position: absolute;
+    filter: blur(0px);
+    font-size: 1.5rem;
+    font-family: 'Playfair Display', serif;
+}
+/* highlight */
+.highlight{
+    font-size: 7rem;
+    color: black;
+    filter:blur(0px);
+    display: inline-block;
+    transform: translateY(100%);
+    transition: 0.6s;
+    clip-path: polygon(0 -100%, 100% -100%, 100% 0%, 0% 0%);
+}
+
+.highlight:nth-child(3){
+    transition-delay: 0.15s;
+}
+.highlight:nth-child(5){
+    transition-delay: 0.3s;
+}
+
+.highlight-animation{
+    transform: translateY(0%) !important;
+    clip-path: polygon(0 0%, 100% 0%, 100% 120%, 0% 120%) !important;
+}
+
+/* small name */
+.small-name{
+    display: inline-block;
+    transform: translateX(-100%);
+    transition: 0.6s;
+    clip-path: polygon(100% 0%, 200% 0%, 200% 100%, 100% 100%);
+}
+
+.small-name:nth-child(2){
+    transition-delay: 0.6s;
+}
+.small-name:nth-child(4){
+    transition-delay: 0.8s;
+}
+.small-name:nth-child(6){
+    transition-delay: 1s;
+}
+
+.small-name-animation{
+    transform: translateY(0%) !important;
+    clip-path: polygon(0 0%, 100% 0%, 100% 120%, 0% 120%) !important;
+}
