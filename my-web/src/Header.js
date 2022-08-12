@@ -23,7 +23,7 @@ function Header() {
             menuButton.current.classList.remove('menu-btn-hidden');
             
             homeMenuButtonRef.current.classList.add('preventClick');
-            
+
             setTimeout(() => {
                 menuOptionWindow.current.classList.add('menu-options-window-hidden');
 
@@ -82,7 +82,7 @@ function Header() {
             <div id="sites">
                 <ul>
                     <li>
-                        <a href="https://github.com/arkk200" rel="noopener" ref={e => sites.current[0] = e}>
+                        <a href="https://github.com/arkk200" target="_blank" rel="noopener noreferrer" ref={e => sites.current[0] = e}>
                             <img src={github_logo} alt="github_logo" ref={e => siteLogos.current[0] = e}/>
                             <span ref={e => siteIds.current[0] = e}>arkk200</span>
                         </a>

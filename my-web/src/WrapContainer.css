@@ -16,7 +16,7 @@ body{
 #background{
     position: fixed !important;
     top: 0;
-    z-index: 1;
+    z-index: -1;
 }
 
 /* Header */
@@ -113,7 +113,7 @@ body{
     top: 50%;
 }
 #header .home-button div:nth-child(2){
-    transform: scaleX(1) translateY(50%) rotateZ(45deg);
+    transform: translateY(50%) rotateZ(45deg) scaleX(1);
     bottom: 50%;
 }
 
@@ -132,7 +132,7 @@ body{
     transition-delay: 0s !important;
 }
 .home-btn-hidden div:nth-child(2){
-    transform: scaleX(0) translateY(50%) rotateZ(45deg) !important;
+    transform: translateY(50%) rotateZ(45deg) scaleX(0) !important;
     transition-delay: 0s !important;
 }
 
@@ -217,6 +217,7 @@ body{
     font-size: 1.2rem;
     color: black;
     text-decoration: black underline;
+    user-select: none;
 }
 #sites span{
     clip-path: polygon(100% 0%, 200% 0%, 200% 100%, 100% 100%);
