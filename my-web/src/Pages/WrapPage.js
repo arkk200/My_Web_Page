@@ -3,25 +3,28 @@ import FirstPage from "./FirstPage/FirstPage";
 import SecondPage from "./SecondPage/SecondPage";
 import './WrapPage.css';
 
-function WrapPage(){
+function WrapPage() {
     const wrapPage = useRef();
     const wrapYSize = useRef(0);
-    
-    const preventScroll = e => {window.scrollTo(0, 0)}
+
+    // 스크롤 막기
+    const preventScroll = e => { window.scrollTo(0, 0) }
     window.addEventListener('scroll', preventScroll);
-    setTimeout(() => {
-        window.removeEventListener('scroll', preventScroll);
-    }, 2000);
+    useEffect(() => {
+        setTimeout(() => {
+            window.removeEventListener('scroll', preventScroll);
+        }, 2000);
+    }, []);
 
     useEffect(() => {
-        function animate(){
+        function animate() {
             requestAnimationFrame(animate);
             wrapYSize.current += (window.scrollY - wrapYSize.current) / 20;
             wrapPage.current.style.top = `-${wrapYSize.current}px`;
         }
         animate();
     }, [wrapYSize]);
-    return(
+    return (
         <div id="wrap-page" ref={wrapPage}>
             <FirstPage />
             <SecondPage />

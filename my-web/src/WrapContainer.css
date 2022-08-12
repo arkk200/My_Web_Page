@@ -8,7 +8,7 @@ body{
 
 /* WrapPage */
 #wrap-container{
-    height: 200vh;
+    height: 500vh;
     overflow: hidden;
 }
 
@@ -118,6 +118,10 @@ body{
 }
 
 /* hidden buttons */
+.preventClick{
+    pointer-events: none;
+}
+
 .menu-btn-hidden div{
     transform: scaleX(0) !important;
     transition-delay: 0s !important;
@@ -225,3 +229,6 @@ body{
     transform: translateX(0%) !important;
     clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%) !important;
 }
+
+/* PageGuide */
+

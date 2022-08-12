@@ -4,7 +4,7 @@ function SecondPage(){
     return(
         <div id="second-page">
             <div id="second-page-contents">
-
+                
             </div>
         </div>
     );

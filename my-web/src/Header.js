@@ -22,8 +22,12 @@ function Header() {
             homeButton.current.classList.add('home-btn-hidden');
             menuButton.current.classList.remove('menu-btn-hidden');
             
+            homeMenuButtonRef.current.classList.add('preventClick');
+            
             setTimeout(() => {
                 menuOptionWindow.current.classList.add('menu-options-window-hidden');
+
+                homeMenuButtonRef.current.classList.remove('preventClick');
             }, 1000);
             menuOptionsBg.current.classList.remove('menu-options-bg-animation');
             for(let i = 0; i < 4; i++)
@@ -31,11 +35,18 @@ function Header() {
                     menuOptionsLi.current[i].classList.remove('li-show-animation');
                 }, 240 - i * 80);
         } else {
+            homeMenuButtonRef.current.classList.add('preventClick');
+            setTimeout(() => {
+                homeMenuButtonRef.current.classList.remove('preventClick');
+            }, 700);
+
             menuButton.current.classList.add('menu-btn-hidden');
             homeButton.current.classList.remove('home-btn-hidden');
 
             menuOptionWindow.current.classList.remove('menu-options-window-hidden');
-            menuOptionsBg.current.classList.add('menu-options-bg-animation');
+            setTimeout(() => {
+                menuOptionsBg.current.classList.add('menu-options-bg-animation');
+            }, 0);
             for(let i = 0; i < 4; i++)
                 setTimeout(() => {
                     menuOptionsLi.current[i].classList.add('li-show-animation');
@@ -78,7 +89,7 @@ function Header() {
                     </li>
                 </ul>
             </div>
-            <div id="home-menu-button" ref={homeMenuButtonRef}>
+            <div id="home-menu-button" ref={homeMenuButtonRef} className="preventClick">
                 <div
                     ref={menuButton} className="menu-button">
                     <div></div>
