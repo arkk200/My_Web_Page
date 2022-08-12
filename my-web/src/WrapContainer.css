@@ -8,7 +8,7 @@ body{
 
 /* WrapPage */
 #wrap-container{
-    height: 500vh;
+    height: 800vh;
     overflow: hidden;
 }
 
@@ -233,3 +233,23 @@ body{
 
 /* PageGuide */
 
+#page-guide{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#guide-line{
+    width: 1.5px;
+    height: 300px;
+    background-color: black;
+    overflow: hidden;
+}
+#guide-gauge{
+    width: 1.5px;
+    height: 1.5px;
+    background-color: white;
+}
