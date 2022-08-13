@@ -36,7 +36,7 @@ function WrapPage() {
     useEffect(() => {
         function animate() {
             requestAnimationFrame(animate);
-            wrapYSize.current += (pageControlSize - wrapYSize.current) / 20;
+            wrapYSize.current += (pageControlSize - wrapYSize.current) / 10;
             wrapPage.current.style.top = `-${wrapYSize.current}px`;
         }
         animate();
