@@ -15,7 +15,7 @@
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    height: 75vh;
+    height: 70vh;
 }
 
 #second-title{
@@ -24,7 +24,7 @@
 }
 
 #second-brace{
-    width: 70%;
+    width: 60%;
 }
 
 #second-paragraph{
