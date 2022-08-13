@@ -75,7 +75,7 @@ function Header() {
                     <li ref={e => menuOptionsLi.current[0] = e}>Home</li>
                     <li ref={e => menuOptionsLi.current[1] = e}>My favorite</li>
                     <li ref={e => menuOptionsLi.current[2] = e}>My stacks</li>
-                    <li ref={e => menuOptionsLi.current[3] = e}>My Works</li>
+                    <li ref={e => menuOptionsLi.current[3] = e}>My works</li>
                 </ul>
                 <div id="menu-options-background" ref={menuOptionsBg}></div>
             </div>
