@@ -2,18 +2,19 @@
 
 /* Contents */
 #first-page{
+    position: relative;
     height: 100vh;
     width: 100vw;
 }
 #first-page #contents{
     position: absolute;
-    top: 50vh;
+    top: 50%;
     left: 3%;
     transform: translateY(-50%);
 }
 
 /* title */
-#contents #title{    
+#contents #title{
     font-size: 21rem;
     font-family: 'Playfair Display', serif;
 }
