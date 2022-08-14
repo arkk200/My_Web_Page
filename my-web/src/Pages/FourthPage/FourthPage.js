@@ -1,5 +1,4 @@
 import './FourthPage.css';
-import brace_image from '../../Images/brace.png';
 
 function FourthPage() {
     return (
@@ -9,7 +8,6 @@ function FourthPage() {
                 <div className="works">
                     <div id="three" className="work-titles">Three.js</div>
                 </div>
-                <img src={brace_image} id="fourth-brace" />
             </div>
         </div>
     );
