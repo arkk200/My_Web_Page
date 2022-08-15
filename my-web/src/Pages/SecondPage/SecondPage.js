@@ -1,12 +1,10 @@
 import './SecondPage.css';
-import brace_image from '../../Images/brace.png'
 
 function SecondPage(){
     return(
         <div id="second-page">
             <div id="second-contents">
                 <h2 id="second-title">My favorite</h2>
-                <img src={brace_image} alt="brace" id='second-brace'/>
                 <div id="second-paragraph">
                     리듬게임을 하거나
                     awwwards에 있는 웹사이트를 구경하거나<br />

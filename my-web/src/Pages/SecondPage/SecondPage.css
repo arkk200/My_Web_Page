@@ -15,16 +15,13 @@
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    height: 70vh;
+    height: 78vh;
+    width: 70%;
 }
 
 #second-title{
     font-size: 3rem;
     font-family: 'Playfair Display', serif;
-}
-
-#second-brace{
-    width: 60%;
 }
 
 #second-paragraph{
