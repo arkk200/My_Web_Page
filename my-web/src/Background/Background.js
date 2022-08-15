@@ -33,7 +33,7 @@ function Background() {
                 <Cube scale={cube_scales[selectObjects - 1]}
                 posSet={
                     selectObjects === 3 ?
-                    [-4.1, 0.7, 0]
+                    [-4.1, 1.3, 0]
                     : selectObjects === 4 ?
                     [-3, 0.6, 0]
                     : [0, 0, 0]
@@ -48,7 +48,7 @@ function Background() {
                     : selectObjects === 2 ?
                     [-4, 0, 0]
                     : selectObjects === 3 ?
-                    [-4.1, -1, 0]
+                    [-4.1, -0.7, 0]
                     : [0, 0.6, 0]
                 } rotSet={[Math.PI / 6, Math.PI / 4, 0]} rotSpeed={[0.005, -0.005, 0.005]}
                 isTransparent={transparent}
@@ -72,7 +72,7 @@ function Background() {
                     : selectObjects === 2 ?
                     [0, -7, 0]
                     : selectObjects === 3 ?
-                    [-1.3, 0.7, 0]
+                    [-1.3, 1.3, 0]
                     : [-3, -2, 0]
                 } rotSet={[Math.PI / 6, Math.PI / 4, 0]} rotSpeed={[-0.005, -0.005, 0.005]}
                 isTransparent={transparent}
@@ -84,7 +84,7 @@ function Background() {
                     : selectObjects === 2 ?
                     [0, -7, 0]
                     : selectObjects === 3 ?
-                    [-1.3, -1, 0]
+                    [-1.3, -0.7, 0]
                     : [0, -2, 0]
                 } rotSet={[Math.PI / 6, Math.PI / 4, 0]} rotSpeed={[-0.005, 0.005, -0.005]}
                 isTransparent={transparent}
@@ -108,7 +108,7 @@ function Background() {
                     : selectObjects === 2 ?
                     [0, -7, 0]
                     : selectObjects === 3 ?
-                    [1.3, 0.7, 0]
+                    [1.3, 1.3, 0]
                     : [1.3, -7, 0]
                 } rotSet={[Math.PI / 6, Math.PI / 4, 0]} rotSpeed={[-0.005, -0.005, -0.005]}
                 isTransparent={transparent}
@@ -120,7 +120,7 @@ function Background() {
                     : selectObjects === 2 ?
                     [0, -7, 0]
                     : selectObjects === 3 ?
-                    [1.3, -1, 0]
+                    [1.3, -0.7, 0]
                     : [1.3, -7, 0]
                 } rotSet={[Math.PI / 6, Math.PI / 4, 0]} rotSpeed={[-0.005, 0.005, 0.005]}
                 isTransparent={transparent}
@@ -144,7 +144,7 @@ function Background() {
                     : selectObjects === 2 ?
                     [0, -7, 0]
                     : selectObjects === 3 ?
-                    [4.1, 0.7, 0]
+                    [4.1, 1.3, 0]
                     : [4.1, -7, 0]
                 } rotSet={[Math.PI / 6, Math.PI / 4, 0]} rotSpeed={[0.005, 0.005, -0.005]}
                 isTransparent={transparent}
@@ -156,7 +156,7 @@ function Background() {
                     : selectObjects === 2 ?
                     [0, -7, 0]
                     : selectObjects === 3 ?
-                    [4.1, -1, 0]
+                    [4.1, -0.7, 0]
                     : [4.1, -7, 0]
                 } rotSet={[Math.PI / 6, Math.PI / 4, 0]} rotSpeed={[0.005, 0.005, 0.005]}
                 isTransparent={transparent}
