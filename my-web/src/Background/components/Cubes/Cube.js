@@ -3,14 +3,28 @@ import { useRef } from "react";
 
 function Cube({posSet = [0, 0, 0], rotSet = [0, 0, 0], rotSpeed = [0, 0, 0], scale=[1, 1, 1]}){
     const cube = useRef();
+    setTimeout(() => {
+        console.dir(cube.current.scale);
+    }, 0);
     useFrame(() => {
         cube.current.rotation.x += rotSpeed[0];
         cube.current.rotation.y += rotSpeed[1];
         cube.current.rotation.z += rotSpeed[2];
+        // cubePosition.current[0] += (posSet[0] - cubePosition.current[0]) * 0.5;
+        // cubePosition.current[1] += (posSet[1] - cubePosition.current[1]) * 0.5;
+        // cubePosition.current[2] += (posSet[2] - cubePosition.current[2]) * 0.5;
+        cube.current.position.x += (posSet[0] - cube.current.position.x) * 0.08;
+        cube.current.position.y += (posSet[1] - cube.current.position.y) * 0.08;
+        cube.current.position.z += (posSet[2] - cube.current.position.z) * 0.08;
+        // let [x, y, z] = [cube.current.geometry.__r3f.memoizedProps.args[0], cube.current.geometry.__r3f.memoizedProps.args[1], cube.current.geometry.__r3f.memoizedProps.args[2]];
+        cube.current.scale.x += (scale[0] - cube.current.scale.x) * 0.08;
+        cube.current.scale.y += (scale[1] - cube.current.scale.y) * 0.08;
+        cube.current.scale.z += (scale[2] - cube.current.scale.z) * 0.08;
+        // console.log(scale, cube.current.geometry.parameters.depth);
     });
     return(
-        <mesh ref={cube} rotation={rotSet} position={posSet} >
-            <boxBufferGeometry args={scale} />
+        <mesh ref={cube} rotation={rotSet} position={[0, -18, 0]} scale={[2, 2, 2]} >
+            <boxBufferGeometry args={[1, 1, 1]} />
             <meshStandardMaterial color={0xf9f9f9} metalness={0.9} roughness={0.1} />
         </mesh>
     )
