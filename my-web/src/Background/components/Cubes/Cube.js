@@ -23,7 +23,7 @@ function Cube({posSet = [0, 0, 0], rotSet = [0, 0, 0], rotSpeed = [0, 0, 0], sca
         // console.log(scale, cube.current.geometry.parameters.depth);
     });
     return(
-        <mesh ref={cube} rotation={rotSet} position={[0, -18, 0]} scale={[2, 2, 2]} >
+        <mesh ref={cube} rotation={rotSet} position={[0, -18, 0]} scale={[0, 0, 0]} >
             <boxBufferGeometry args={[1, 1, 1]} />
             <meshStandardMaterial color={0xf9f9f9} metalness={0.9} roughness={0.1} />
         </mesh>
