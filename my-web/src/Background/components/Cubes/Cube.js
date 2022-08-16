@@ -1,7 +1,7 @@
 import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 
-function Cube({posSet = [0, 0, 0], rotSet = [0, 0, 0], rotSpeed = [0, 0, 0], scale=[1, 1, 1], isTransparent}){
+function Cube({posSet = [0, 0, 0], rotSet = [0, 0, 0], rotSpeed = [0, 0, 0], scale=[1, 1, 1], isTransparent, onClick = () => {}}){
     const cube = useRef();
     setTimeout(() => {
     }, 0);
@@ -22,7 +22,7 @@ function Cube({posSet = [0, 0, 0], rotSet = [0, 0, 0], rotSpeed = [0, 0, 0], sca
             cube.current.material.opacity += (1 - cube.current.material.opacity) * 0.3;
     });
     return(
-        <mesh ref={cube} rotation={rotSet} position={[0, -18, 0]} scale={[0, 0, 0]} >
+        <mesh ref={cube} rotation={rotSet} position={[0, -18, 0]} scale={[0, 0, 0]} onClick={onClick}>
             <boxBufferGeometry args={[1, 1, 1]} />
             <meshStandardMaterial color={0xf9f9f9} opacity={1} transparent metalness={0.9} roughness={0.1} />
         </mesh>

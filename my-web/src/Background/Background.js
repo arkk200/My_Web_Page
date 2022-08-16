@@ -1,5 +1,5 @@
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei'
+// import { OrbitControls } from '@react-three/drei';
 import Cube from './components/Cubes/Cube';
 import { useState } from 'react';
 function Background() {
@@ -18,6 +18,10 @@ function Background() {
                 (window.scrollY > window.innerHeight * 4 + 2 && window.scrollY < window.innerHeight * 5 - 2))
                 setTransparent(true);
             else setTransparent(false);
+
+            // Set z-index
+            if(window.scrollY >= window.innerHeight * 5 - 2){
+            }
         });
     }, 2000);
     const cube_scales = [
@@ -27,8 +31,8 @@ function Background() {
         [1.5, 1.5, 1.5]
     ]
     return (
-        <Canvas id="background">
-            <OrbitControls />
+        <Canvas id="background" className={ window.scrollY >= window.innerHeight * 5 - 2 ? "background-set-z-index--1" : '' }>
+            {/* <OrbitControls /> */}
             <>
                 <Cube scale={cube_scales[selectObjects - 1]}
                 posSet={
@@ -40,6 +44,7 @@ function Background() {
                 }
                 rotSet={[Math.PI / 6, Math.PI / 4, 0]} rotSpeed={[-0.005, 0.005, 0.005]}
                 isTransparent={transparent}
+                onClick={() => {console.log('1')}}
                 />
                 <Cube scale={cube_scales[selectObjects - 1]}
                 posSet={
@@ -52,6 +57,7 @@ function Background() {
                     : [0, 0.6, 0]
                 } rotSet={[Math.PI / 6, Math.PI / 4, 0]} rotSpeed={[0.005, -0.005, 0.005]}
                 isTransparent={transparent}
+                onClick={() => {console.log('2')}}
                 />
                 <Cube scale={cube_scales[selectObjects - 1]}
                 posSet={
@@ -64,6 +70,7 @@ function Background() {
                     : [3, 0.6, 0]
                 } rotSet={[Math.PI / 6, Math.PI / 4, 0]} rotSpeed={[0.005, 0.005, -0.005]}
                 isTransparent={transparent}
+                onClick={() => {console.log('3')}}
                 />
                 <Cube scale={cube_scales[selectObjects - 1]}
                 posSet={
@@ -76,6 +83,7 @@ function Background() {
                     : [-3, -2, 0]
                 } rotSet={[Math.PI / 6, Math.PI / 4, 0]} rotSpeed={[-0.005, -0.005, 0.005]}
                 isTransparent={transparent}
+                onClick={() => {console.log('4')}}
                 />
                 <Cube scale={cube_scales[selectObjects - 1]}
                 posSet={
@@ -88,6 +96,7 @@ function Background() {
                     : [0, -2, 0]
                 } rotSet={[Math.PI / 6, Math.PI / 4, 0]} rotSpeed={[-0.005, 0.005, -0.005]}
                 isTransparent={transparent}
+                onClick={() => {console.log('5')}}
                 />
                 <Cube scale={cube_scales[selectObjects - 1]}
                 posSet={
@@ -100,6 +109,7 @@ function Background() {
                     : [3, -2, 0]
                 } rotSet={[Math.PI / 6, Math.PI / 4, 0]} rotSpeed={[0.005, -0.005, -0.005]}
                 isTransparent={transparent}
+                onClick={() => {console.log('6')}}
                 />
                 <Cube scale={cube_scales[selectObjects - 1]}
                 posSet={
