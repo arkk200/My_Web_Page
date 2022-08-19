@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/My_Web_Page/static/css/main.477674d7.css",
+    "main.js": "/My_Web_Page/static/js/main.9424cd51.js",
+    "static/media/github_logo.png": "/My_Web_Page/static/media/github_logo.a5527b5c02e754fc4a6d.png",
+    "index.html": "/My_Web_Page/index.html",
+    "main.477674d7.css.map": "/My_Web_Page/static/css/main.477674d7.css.map",
+    "main.9424cd51.js.map": "/My_Web_Page/static/js/main.9424cd51.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.477674d7.css",
+    "static/js/main.9424cd51.js"
+  ]
+}
