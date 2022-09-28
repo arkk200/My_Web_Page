@@ -1,17 +1,23 @@
-import WrapPage from "./Pages/WrapPage";
-import Header from "./Header";
-import Background from "./Background/Background";
-import PageGuide from "./PageGuide";
-import './WrapContainer.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
 
-function App() { 
+import WrapContainer from "./WrapContainer";
+
+function App() {
   return (
-    <div id="wrap-container">
-      <Header />
-      <Background />
-      <WrapPage />
-      <PageGuide />
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/">
+          <WrapContainer />
+        </Route>
+        <Route path="/three">
+          <div>test</div>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

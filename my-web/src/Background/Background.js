@@ -1,7 +1,8 @@
 import { Canvas } from '@react-three/fiber';
 // import { OrbitControls } from '@react-three/drei';
 import Cube from './components/Cubes/Cube';
-import { useState } from 'react';
+import { useState, Suspense } from 'react';
+import { Link } from 'react-router-dom';
 function Background() {
     const [selectObjects, setSelectObjects] = useState(1);
     const [transparent, setTransparent] = useState(false);
@@ -33,7 +34,7 @@ function Background() {
     return (
         <Canvas id="background" className={ window.scrollY >= window.innerHeight * 5 - 2 ? "background-set-z-index--1" : '' }>
             {/* <OrbitControls /> */}
-            <>
+            <Suspense>
                 <Cube scale={cube_scales[selectObjects - 1]}
                 posSet={
                     selectObjects === 3 ?
@@ -44,7 +45,7 @@ function Background() {
                 }
                 rotSet={[Math.PI / 6, Math.PI / 4, 0]} rotSpeed={[-0.005, 0.005, 0.005]}
                 isTransparent={transparent}
-                onClick={() => {console.log('1')}}
+                onClick={() => window.appHistory.push("/three")}
                 />
                 <Cube scale={cube_scales[selectObjects - 1]}
                 posSet={
@@ -171,7 +172,7 @@ function Background() {
                 } rotSet={[Math.PI / 6, Math.PI / 4, 0]} rotSpeed={[0.005, 0.005, 0.005]}
                 isTransparent={transparent}
                 />
-            </>
+            </Suspense>
             <ambientLight intensity={1} />
             <spotLight position={[-Math.sqrt(2) * 5, 0, Math.sqrt(2) * 5]} />
             <spotLight position={[0, 0, 10]} />
